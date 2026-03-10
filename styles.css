@@ -158,6 +158,7 @@ img {
 
 .photo-section {
   position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -513,55 +514,50 @@ img {
 
 @media (max-width: 768px) {
   :root {
-    --header-height: auto;
     --wave-height: 60px;
   }
 
   .header-inner {
     flex-wrap: wrap;
-    gap: 12px;
-    padding: 12px 20px;
+    gap: 8px;
+    padding: 10px 20px;
     min-height: auto;
   }
 
   .header-left {
-    order: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    order: 2;
+    flex: 0 0 auto;
   }
 
   .header-center {
-    order: 2;
+    order: 1;
     flex: 1 1 100%;
   }
 
   .header-right {
     order: 3;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    flex: 0 0 auto;
   }
 
   .logo-link {
-    margin-bottom: -30px;
+    margin-bottom: -20px;
   }
 
   .logo {
-    max-height: 90px;
-    height: 90px;
+    max-height: 80px;
+    height: 80px;
+  }
+
+  .hero-section {
+    padding-top: 160px;
   }
 
   .container {
     padding: 0 20px;
   }
 
-  .hero-section {
-    min-height: 100svh;
-  }
-
   .hero-text {
-    padding: 60px 0;
+    padding: 40px 0;
   }
 
   .hero-title {
@@ -647,7 +643,11 @@ img {
   }
 
   .header-inner {
-    padding: 10px 16px;
+    padding: 8px 16px;
+  }
+
+  .hero-section {
+    padding-top: 140px;
   }
 
   .hero-title {
