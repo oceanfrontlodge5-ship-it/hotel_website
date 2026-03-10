@@ -1,11 +1,14 @@
-/* Seaside Restaurant & Bar - Identical Clone */
+/* ===================================================
+   Seaside Restaurant & Bar – Layered Parallax Scroll
+   =================================================== */
+
 :root {
   --color-primary: #05456F;
   --color-accent: #7acdee;
-  --color-doordash: #d77ea6;
-  --color-google: #dc4e41;
   --color-text: #333;
   --color-white: #fff;
+  --header-height: 100px;
+  --wave-height: 100px;
 }
 
 * {
@@ -26,74 +29,80 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* Skip Link */
-.skip-link.screen-reader-text {
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.skip-link {
   position: absolute;
   top: -9999px;
   left: -9999px;
   z-index: 999999;
+  padding: 15px 23px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .skip-link:focus {
   top: 0;
   left: 0;
-  padding: 15px 23px;
-  background: var(--color-primary);
-  color: #fff;
-  text-decoration: none;
 }
 
-/* Header - White navbar, scrolls with page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/* =========================
+   FIXED HEADER
+   ========================= */
+
 .site-header {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 16px 0 0;
   background: var(--color-white);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
-.ast-main-header-wrap {
+.header-inner {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0 40px;
-  padding-left: max(40px, env(safe-area-inset-left));
-  padding-right: max(40px, env(safe-area-inset-right));
-}
-
-.ast-primary-header-bar {
-  min-height: 88px;
-}
-
-.ast-builder-grid-row.ast-grid-center-col-layout {
+  padding: 16px 40px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: var(--header-height);
 }
 
-.site-header-primary-section-left {
+.header-left,
+.header-right {
   flex: 0 0 auto;
 }
 
-.site-header-primary-section-center {
+.header-center {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.site-header-primary-section-right {
-  flex: 0 0 auto;
-}
-
-/* Social Icons - Header (dark teal squares with white icons) */
-.ast-header-social-wrap {
+.header-social {
   display: flex;
   gap: 10px;
 }
 
-.header-social-item {
+.social-icon-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -104,31 +113,28 @@ body {
   transition: opacity 0.3s;
 }
 
-.header-social-item svg {
+.social-icon-btn svg {
   width: 21px;
   height: 21px;
   fill: var(--color-white);
 }
 
-.header-social-item:hover {
-  opacity: 0.9;
+.social-icon-btn:hover {
+  opacity: 0.85;
 }
 
-/* Logo - extends below nav, overlapping hero */
-.custom-logo-link {
+.logo-link {
   display: block;
   margin-bottom: -49px;
 }
 
-.custom-logo {
+.logo {
   max-height: 120px;
   width: auto;
   height: 120px;
-  display: block;
 }
 
-/* Online Order Button - thin border, white bg */
-.ast-custom-button-link {
+.btn-order {
   display: inline-block;
   padding: 13px 20px;
   border: 2px solid var(--color-primary);
@@ -137,83 +143,76 @@ body {
   font-size: 14px;
   font-weight: 700;
   text-decoration: none;
-  border-radius: 0;
   transition: all 0.3s;
 }
 
-.ast-custom-button-link:hover {
+.btn-order:hover {
   background: var(--color-primary);
   color: var(--color-white);
-  border-color: var(--color-primary);
 }
 
-/* Hero Section */
-.hero-section {
+
+/* =========================
+   PHOTO SECTIONS (Parallax)
+   ========================= */
+
+.photo-section {
   position: relative;
-  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 140px 24px 80px;
-}
-
-.hero-background {
-  position: absolute;
-  inset: 0;
+  justify-content: center;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
-.hero-overlay {
+.photo-overlay {
   position: absolute;
   inset: 0;
-  background-color: var(--color-primary);
+  background: var(--color-primary);
   opacity: 0.1;
   pointer-events: none;
 }
 
-.hero-section .elementor-container {
+.photo-overlay-dark {
+  background: #101218;
+  opacity: 0.5;
+}
+
+.photo-content {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
 }
 
-.hero-section .elementor-column {
+.hero-section {
+  min-height: 100vh;
+  padding-top: var(--header-height);
+}
+
+.hero-text {
   max-width: 600px;
+  padding: 80px 0;
 }
 
-/* Hero divider - Welcome to seaside */
-.hero-divider {
-  margin-bottom: 20px;
-}
-
-.hero-divider .elementor-divider-separator {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.hero-divider .elementor-divider-separator::after {
-  content: '';
-  margin-top: 8px;
-  width: 80px;
-  height: 12px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.9)' stroke-width='1.5' stroke-linecap='square'%3E%3Cpath d='M0,6c6,0,0.9,11.1,6.9,11.1S18,6,24,6'/%3E%3C/svg%3E") repeat-x;
-  background-size: 24px 12px;
-}
-
-.hero-divider .elementor-divider__text {
+.hero-label {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.95);
-  margin: 0;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 8px;
 }
 
-/* Hero Title */
+.hero-squiggle {
+  width: 80px;
+  height: 12px;
+  margin-bottom: 20px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.9)' stroke-width='1.5' stroke-linecap='square'%3E%3Cpath d='M0,6c6,0,0.9,11.1,6.9,11.1S18,6,24,6'/%3E%3C/svg%3E") repeat-x;
+  background-size: 24px 12px;
+}
+
 .hero-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 3.5rem;
@@ -221,11 +220,10 @@ body {
   color: var(--color-white);
   line-height: 1.2;
   margin-bottom: 28px;
-  text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Discover More Button */
-.elementor-button.elementor-button-link {
+.btn-outline-white {
   display: inline-block;
   padding: 12px 28px;
   border: 2px solid var(--color-white);
@@ -238,43 +236,78 @@ body {
   transition: all 0.3s;
 }
 
-.elementor-button.elementor-button-link:hover {
+.btn-outline-white:hover {
   background: var(--color-white);
   color: var(--color-primary);
 }
 
-/* Wave shape - bottom of hero (Elementor wave-brush) */
-.hero-section .elementor-shape-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
+.fullbar-section {
+  min-height: 70vh;
+}
+
+.fullbar-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-align: center;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =========================
+   CONTENT PANELS (White)
+   =========================
+   These panels sit ABOVE photo sections (z-index: 2).
+   wave-top pulls the panel upward over the photo section
+   above it with negative margin, creating the curved
+   overlap. wave-bottom extends downward so the next
+   photo section is revealed smoothly. */
+
+.content-panel {
+  position: relative;
+  z-index: 2;
+}
+
+.wave-top {
+  margin-top: calc(-1 * var(--wave-height));
   line-height: 0;
 }
 
-.hero-section .elementor-shape-bottom svg,
-.hero-section .elementor-shape-smooth svg {
-  width: 100%;
-  height: 70px;
-  fill: var(--color-white);
+.wave-top svg {
   display: block;
+  width: 100%;
+  height: var(--wave-height);
+  fill: var(--color-white);
 }
 
-/* About Section */
-.section-about {
-  padding: 80px 24px;
+.wave-bottom {
+  position: relative;
+  margin-bottom: calc(-1 * var(--wave-height));
+  line-height: 0;
+}
+
+.wave-bottom svg {
+  display: block;
+  width: 100%;
+  height: var(--wave-height);
+  fill: var(--color-white);
+}
+
+.panel-body {
   background: var(--color-white);
+  padding: 60px 0;
 }
 
-.section-about .elementor-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+.menu-panel .panel-body {
+  background: #fafafa;
+  padding: 80px 0;
 }
+
+
+/* =========================
+   SHARED SECTION STYLES
+   ========================= */
 
 .section-label {
   font-size: 12px;
@@ -302,168 +335,66 @@ body {
   text-decoration: underline;
 }
 
-/* Divider with fish */
-.divider-fish {
-  margin: 16px 0 24px;
-}
-
-.divider-fish .elementor-divider-separator {
+.fish-divider {
   display: flex;
   align-items: center;
   gap: 12px;
+  margin: 16px 0 24px;
 }
 
-.divider-fish .elementor-divider-separator::before {
-  content: '';
+.fish-divider .squiggle {
   flex: 1;
   max-width: 120px;
   height: 16px;
+  display: block;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 24 24' fill='none' stroke='%237acdee' stroke-width='2' stroke-linecap='square'%3E%3Cpath d='M0,6c6,0,0.9,11.1,6.9,11.1S18,6,24,6'/%3E%3C/svg%3E") repeat-x;
   background-size: 24px 16px;
 }
 
-.divider-fish .elementor-icon {
+.fish-divider .fa-fish {
   color: var(--color-accent);
   font-size: 18px;
   flex-shrink: 0;
 }
 
-.divider-center .elementor-divider-separator {
+.fish-divider-center {
   justify-content: center;
 }
 
-.divider-center .elementor-divider-separator::before {
+.fish-divider-center .squiggle {
   max-width: 60px;
 }
 
-.about-text p,
-.work-text .elementor-widget-text-editor {
-  font-size: 16px;
-  line-height: 1.7;
-  color: var(--color-text);
-  margin-bottom: 16px;
-}
 
-.about-img {
-  width: 100%;
-  height: auto;
-  max-width: 600px;
-  display: block;
-  border-radius: 4px;
-}
+/* =========================
+   GRID LAYOUTS
+   ========================= */
 
-/* Full Bar Section */
-.section-fullbar {
-  position: relative;
-  min-height: 450px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 100px 24px;
-}
-
-.fullbar-background {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-
-.section-fullbar .elementor-background-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: #101218;
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.section-fullbar .elementor-shape {
-  position: absolute;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-  line-height: 0;
-}
-
-.section-fullbar .elementor-shape-top {
-  top: 0;
-}
-
-.section-fullbar .elementor-shape-bottom {
-  bottom: 0;
-}
-
-.section-fullbar .elementor-shape svg {
-  width: 100%;
-  height: 60px;
-  fill: var(--color-white);
-  display: block;
-}
-
-.elementor-shape-smooth svg {
-  shape-rendering: geometricPrecision;
-}
-
-.fullbar-title {
-  position: relative;
-  z-index: 2;
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 3.5rem;
-  font-weight: 600;
-  color: var(--color-white);
-  text-align: center;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.4);
-}
-
-/* Our Work Section */
-.section-work {
-  padding: 80px 24px;
-  background: var(--color-white);
-}
-
-.section-work .elementor-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.grid-2col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
 }
 
-.work-img {
-  width: 100%;
-  height: auto;
-  max-width: 500px;
-  display: block;
+.about-text p,
+.work-text p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.about-image img,
+.work-image img {
   border-radius: 4px;
-}
-
-/* Menu Section */
-.section-menu {
-  padding: 80px 24px;
-  background: #fafafa;
-}
-
-.section-menu .elementor-container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-menu .elementor-col-100 {
-  text-align: center;
-}
-
-.section-menu .section-label,
-.section-menu .section-title {
-  text-align: center;
 }
 
 .menu-title-box {
   display: inline-block;
   padding: 20px 40px;
   border: 4px solid var(--color-primary);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .menu-title-box a {
@@ -471,29 +402,35 @@ body {
   color: inherit;
 }
 
-/* Footer */
+
+/* =========================
+   FOOTER
+   ========================= */
+
 .site-footer {
+  position: relative;
+  z-index: 2;
   background: var(--color-primary);
   color: var(--color-white);
   padding: 60px 24px 30px;
 }
 
-.site-primary-footer-wrap {
+.footer-inner {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.site-footer-primary-section-1 {
+.footer-main {
   text-align: center;
 }
 
-.footer-widget {
+.footer-logo-wrap {
   margin-bottom: 24px;
 }
 
 .footer-logo {
   max-width: 97px;
-  height: auto;
+  margin: 0 auto;
 }
 
 .footer-text p {
@@ -501,78 +438,63 @@ body {
   margin: 0 auto 24px;
   font-size: 16px;
   line-height: 1.7;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.ast-footer-social-wrap {
+.footer-social {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.footer-social-item {
-  color: var(--color-accent) !important;
+.footer-social-link {
   display: inline-flex;
   padding: 10px;
   transition: opacity 0.3s;
 }
 
-.footer-social-item[style*="dc4e41"] {
-  color: #dc4e41 !important;
-}
-
-.footer-social-item svg {
+.footer-social-link svg {
   width: 24px;
   height: 24px;
 }
 
-.footer-social-item:hover {
+.footer-social-link:hover {
   opacity: 0.8;
 }
 
-.site-below-footer-wrap {
+.footer-bottom {
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 30px;
-  border-top: 1px solid rgba(255,255,255,0.2);
-}
-
-.ast-footer-copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
 }
 
-.ast-footer-copyright p {
+.footer-bottom p {
   font-size: 14px;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-/* Mobile: disable fixed background (better performance & iOS compatibility) */
+
+/* =========================
+   MOBILE: Disable parallax
+   ========================= */
+
 @media (max-width: 1024px) {
-  .hero-background,
-  .fullbar-background {
+  .photo-section {
     background-attachment: scroll;
   }
 }
 
-/* Responsive */
+
+/* =========================
+   RESPONSIVE: Tablets
+   ========================= */
+
 @media (max-width: 968px) {
-  .section-about .elementor-container,
-  .section-work .elementor-container {
+  .grid-2col {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-
-  .section-work .elementor-container {
-    direction: ltr;
-  }
-
-  .work-image-col {
-    order: 1;
-  }
-
-  .work-text {
-    order: 2;
   }
 
   .hero-title {
@@ -582,65 +504,64 @@ body {
   .fullbar-title {
     font-size: 2.5rem;
   }
-
-  .elementor-col-50 {
-    max-width: 100%;
-    width: 100%;
-  }
 }
 
+
+/* =========================
+   RESPONSIVE: Mobile
+   ========================= */
+
 @media (max-width: 768px) {
-  .ast-main-header-wrap {
-    padding: 0 20px;
-    padding-left: max(20px, env(safe-area-inset-left));
-    padding-right: max(20px, env(safe-area-inset-right));
+  :root {
+    --header-height: auto;
+    --wave-height: 60px;
   }
 
-  .ast-primary-header-bar {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 20px;
     min-height: auto;
   }
 
-  .ast-builder-grid-row.ast-grid-center-col-layout {
-    flex-wrap: wrap;
-    gap: 16px;
-    padding: 12px 0;
-  }
-
-  .site-header-primary-section-left {
+  .header-left {
     order: 1;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .site-header-primary-section-center {
+  .header-center {
     order: 2;
     flex: 1 1 100%;
   }
 
-  .site-header-primary-section-right {
+  .header-right {
     order: 3;
     width: 100%;
     display: flex;
     justify-content: center;
   }
 
-  .ast-header-social-wrap {
-    justify-content: center;
-  }
-
-  .custom-logo-link {
+  .logo-link {
     margin-bottom: -30px;
   }
 
-  .custom-logo {
+  .logo {
     max-height: 90px;
     height: 90px;
   }
 
+  .container {
+    padding: 0 20px;
+  }
+
   .hero-section {
-    padding: 120px 20px 60px;
     min-height: 100svh;
+  }
+
+  .hero-text {
+    padding: 60px 0;
   }
 
   .hero-title {
@@ -648,15 +569,13 @@ body {
     line-height: 1.3;
   }
 
-  .hero-divider .elementor-divider__text {
+  .hero-label {
     font-size: 12px;
     letter-spacing: 2px;
   }
 
-  .section-about,
-  .section-work,
-  .section-menu {
-    padding: 60px 20px;
+  .panel-body {
+    padding: 48px 0;
   }
 
   .section-title {
@@ -664,13 +583,12 @@ body {
   }
 
   .about-text p,
-  .work-text .elementor-widget-text-editor {
+  .work-text p {
     font-size: 15px;
   }
 
-  .section-fullbar {
-    min-height: 320px;
-    padding: 60px 20px;
+  .fullbar-section {
+    min-height: 50vh;
   }
 
   .fullbar-title {
@@ -679,7 +597,6 @@ body {
 
   .menu-title-box {
     padding: 16px 24px;
-    font-size: 1.25rem;
     display: block;
     margin: 0 auto;
     max-width: 90%;
@@ -689,51 +606,48 @@ body {
     padding: 48px 20px 24px;
   }
 
-  .footer-text p {
-    font-size: 15px;
-  }
-
-  /* Touch-friendly tap targets (min 44px) */
-  .header-social-item {
+  /* Touch-friendly targets */
+  .social-icon-btn {
     padding: 12px;
     min-width: 44px;
     min-height: 44px;
   }
 
-  .ast-custom-button-link {
+  .btn-order {
     padding: 14px 24px;
     min-height: 44px;
-    display: inline-flex;
-    align-items: center;
   }
 
-  .elementor-button.elementor-button-link {
+  .btn-outline-white {
     padding: 14px 28px;
     min-height: 44px;
-    display: inline-flex;
-    align-items: center;
   }
 
-  .footer-social-item {
+  .footer-social-link {
     padding: 14px;
     min-width: 48px;
     min-height: 48px;
-    display: inline-flex;
     align-items: center;
     justify-content: center;
   }
 }
 
-/* Extra small screens */
+
+/* =========================
+   RESPONSIVE: Small phones
+   ========================= */
+
 @media (max-width: 480px) {
-  .ast-main-header-wrap {
-    padding: 0 16px;
-    padding-left: max(16px, env(safe-area-inset-left));
-    padding-right: max(16px, env(safe-area-inset-right));
+  :root {
+    --wave-height: 50px;
   }
 
-  .hero-section {
-    padding: 100px 16px 50px;
+  .container {
+    padding: 0 16px;
+  }
+
+  .header-inner {
+    padding: 10px 16px;
   }
 
   .hero-title {
@@ -741,10 +655,8 @@ body {
     margin-bottom: 20px;
   }
 
-  .section-about,
-  .section-work,
-  .section-menu {
-    padding: 48px 16px;
+  .panel-body {
+    padding: 40px 0;
   }
 
   .section-title {
@@ -758,7 +670,6 @@ body {
 
   .menu-title-box {
     padding: 14px 16px;
-    font-size: 1.1rem;
     max-width: 100%;
   }
 
@@ -766,7 +677,7 @@ body {
     padding: 40px 16px 20px;
   }
 
-  .ast-footer-copyright p {
+  .footer-bottom p {
     font-size: 13px;
   }
 }
