@@ -2,13 +2,14 @@
    Seaside Restaurant & Bar – Layered Parallax Scroll
    =================================================== */
 
-/* Self-hosted fonts: the latin variable files from Google Fonts (SIL Open Font License, see /fonts/OFL.txt). */
+/* Self-hosted fonts: latin files from Google Fonts (SIL Open Font License, see /fonts/OFL.txt).
+   Every Playfair heading is weight 600, so only that weight is loaded; Source Sans 3 is the variable file. */
 @font-face {
   font-family: 'Playfair Display';
   font-style: normal;
-  font-weight: 400 700;
+  font-weight: 600;
   font-display: swap;
-  src: url(/fonts/playfair-display.woff2) format('woff2');
+  src: url(/fonts/playfair-display-600.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -54,6 +55,29 @@
   line-gap-override: 0%;
 }
 
+/* Android has no Arial, so the Source Sans 3 fallbacks above fail there; these do the same with
+   Roboto (size-adjust tuned in Chrome so the hero text wraps the same before and after the swap at
+   common phone widths; overrides worked out as above). */
+@font-face {
+  font-family: 'Source Sans 3 Fallback Android';
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto Regular'), local('Roboto-Regular');
+  size-adjust: 92.25%;
+  ascent-override: 111%;
+  descent-override: 43.36%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Source Sans 3 Fallback Android';
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold');
+  size-adjust: 94.5%;
+  ascent-override: 108.36%;
+  descent-override: 42.33%;
+  line-gap-override: 0%;
+}
+
 :root {
   --color-primary: #05456F;
   --color-accent: #7acdee;
@@ -86,7 +110,7 @@ html {
 }
 
 body {
-  font-family: 'Source Sans 3', 'Source Sans 3 Fallback', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Source Sans 3', 'Source Sans 3 Fallback', 'Source Sans 3 Fallback Android', -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--color-text);
   background: var(--color-white);
   line-height: 1.6;
@@ -243,8 +267,8 @@ a[href^="tel:"],
 }
 
 /* Parallax only where it works and is cheap: wide screens with a mouse
-   (iOS/iPadOS Safari ignores background-attachment: fixed). */
-@media (min-width: 1025px) and (hover: hover) and (pointer: fine) {
+   (iOS/iPadOS Safari ignores background-attachment: fixed), and not for visitors who ask for less motion. */
+@media (min-width: 1025px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .photo-section {
     background-attachment: fixed;
   }
@@ -372,19 +396,25 @@ a[href^="tel:"],
 
 .fullbar-section {
   min-height: 70vh;
+}
+
+/* The bar photo loads only once its section comes near the screen: script.js adds .is-near
+   (and a <noscript> style in index.html shows it without JavaScript). */
+.fullbar-section.is-near {
   background-image: url(/images/fullbar-1280.jpg);
   background-image: image-set(url(/images/fullbar-800.webp) type("image/webp"), url(/images/fullbar-1280.jpg) type("image/jpeg"));
 }
 
-@media (min-width: 769px) {
-  .fullbar-section {
+/* Tablets and laptops, and high-density phones (the 800px file looks soft there). */
+@media (min-width: 769px), (min-resolution: 2dppx), (-webkit-min-device-pixel-ratio: 2) {
+  .fullbar-section.is-near {
     background-image: url(/images/fullbar-1280.jpg);
     background-image: image-set(url(/images/fullbar-1280.webp) type("image/webp"), url(/images/fullbar-1280.jpg) type("image/jpeg"));
   }
 }
 
 @media (min-width: 1281px) {
-  .fullbar-section {
+  .fullbar-section.is-near {
     background-image: url(/images/fullbar-1280.jpg);
     background-image: image-set(url(/images/fullbar-1920.webp) type("image/webp"), url(/images/fullbar-1280.jpg) type("image/jpeg"));
   }
@@ -543,6 +573,15 @@ summary:focus-visible {
 .site-footer a:focus-visible,
 .photo-section a:focus-visible {
   outline-color: var(--color-white);
+}
+
+/* From 769px the logo hangs 43px below the header: keep links and summaries that the browser
+   scrolls to the top (e.g. with Shift+Tab) clear of it, focus ring included. */
+@media (min-width: 769px) {
+  a,
+  summary {
+    scroll-margin-top: 52px;
+  }
 }
 
 /* Buttons on light panels */
@@ -725,6 +764,28 @@ summary:focus-visible {
 
 .accordion[open] > summary::after {
   background: var(--color-primary) linear-gradient(var(--color-white), var(--color-white)) center / 12px 2px no-repeat;
+}
+
+/* High-contrast modes drop the gradients above, so draw the signs as text there. */
+@media (forced-colors: active) {
+  .accordion > summary::after {
+    content: "+";
+    content: "+" / "";
+    display: grid;
+    place-items: center;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .accordion[open] > summary::after {
+    content: "\2212";
+    content: "\2212" / "";
+  }
+}
+
+/* Room between an open summary and its content, so the focus ring doesn't cross the first line. */
+.accordion[open] > summary {
+  margin-bottom: 8px;
 }
 
 .accordion > summary:hover {
@@ -1168,9 +1229,15 @@ summary:focus-visible {
     max-width: 90%;
   }
 
+  /* One column: if enlarged or spaced-out text makes the hours table wider than the screen,
+     it scrolls in its own box instead of being cut off at the edge of the page. */
   .visit-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 40px;
+  }
+
+  .visit-hours {
+    overflow-x: auto;
   }
 
   .notfound {
@@ -1303,7 +1370,31 @@ summary:focus-visible {
     padding: 12px;
   }
 
+  /* The phone number goes on its own line here, without a separator left dangling. */
+  .footer-sep {
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
   .footer-bottom p {
     font-size: 13px;
+  }
+}
+
+
+/* =========================
+   RESPONSIVE: Narrowest phones
+   ========================= */
+
+/* Below 360px the 80px logo runs into the Online Order button; a smaller one keeps the header height. */
+@media (max-width: 359px) {
+  .logo {
+    max-height: 68px;
+    height: 68px;
+  }
+
+  .logo-link {
+    margin-bottom: -8px;
   }
 }

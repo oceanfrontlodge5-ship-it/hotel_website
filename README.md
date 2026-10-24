@@ -35,17 +35,22 @@ branch and merge it into `main` when it is ready to go live.
 
 ## When something changes
 
-- **Hours** are in three places in `index.html`: the table in the "Hours & location" section (`#visit`), the
-  two hours answers in the FAQ (`#faq`), and `openingHoursSpecification` in the JSON-LD in the `<head>`.
-  Change all three together. Until the owner confirms the hours, each visible value is marked with
+- **Hours** are in four places in `index.html`: the table in the "Hours & location" section (`#visit`), the
+  two hours answers in the FAQ (`#faq`), `openingHoursSpecification` in the JSON-LD in the `<head>`, and the
+  breakfast opening time in the "Every day" section ("Mornings start at 7"). Change them all together. Until
+  the owner confirms the hours, each value in the table and the FAQ is marked with
   `<!-- HOURS (provisional) -->`. Also update Google, Yelp and the other listings so they all agree.
 - **Phone number** (707) 465-5400 is in the hero ("Call"), the "Every day" section, the "Hours & location"
   address, the footer, the JSON-LD `telephone`, and `404.html`. Search both HTML files for `465-5400` and
   `4655400` to find every copy.
-- **Menu**: the six signature dishes and the full menu are in the `#menu` section of `index.html`. Prices are
-  not on the site; online ordering (Toast) shows them.
+- **Menu**: the six signature dishes and the full menu are in the `#menu` section of `index.html`. Dishes are
+  also named in the About and "Every day" paragraphs, the FAQ (clam chowder, kids pancakes) and the dish photos
+  in the JSON-LD `image` list; update those too if a dish changes or is dropped. Prices are not on the site;
+  online ordering (Toast) shows them.
 - **Images** are cached by browsers for a week, and fonts for a year. When you replace one, give the new file a
   new name and update every reference to it (`index.html`, `styles.css`, the JSON-LD, `404.html`) instead of
   overwriting the old file, or visitors keep seeing the old one.
 - **Old addresses**: only the old site's real pages are redirected (listed in `vercel.json`). Everything else,
   including old spam pages, must keep answering 404, so never add a catch-all redirect.
+- **Sitemap date**: after changing anything visible on the page (hours, menu, phone, text), set `<lastmod>` in
+  `sitemap.xml` to that day's date (YYYY-MM-DD) in the same commit.
