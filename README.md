@@ -37,12 +37,13 @@ branch and merge it into `main` when it is ready to go live.
 
 - **Hours** are in four places in `index.html`: the table in the "Hours & location" section (`#visit`), the
   two hours answers in the FAQ (`#faq`), `openingHoursSpecification` in the JSON-LD in the `<head>`, and the
-  breakfast opening time in the "Every day" section ("Mornings start at 7"). Change them all together. Until
-  the owner confirms the hours, each value in the table and the FAQ is marked with
-  `<!-- HOURS (provisional) -->`. Also update Google, Yelp and the other listings so they all agree.
+  breakfast opening time in the "Every day" section ("Mornings start at 7"). Change them all together, and
+  update Google, Yelp and the other listings so they all agree. (Confirmed by the owner on 2026-10-24.)
+- **Reservations, outdoor seating and dogs** (reservations by phone; dogs welcome in the outdoor seating) are in
+  the list under the address in "Hours & location", two FAQ answers, and `acceptsReservations` in the JSON-LD.
 - **Phone number** (707) 465-5400 is in the hero ("Call"), the "Every day" section, the "Hours & location"
-  address, the footer, the JSON-LD `telephone`, and `404.html`. Search both HTML files for `465-5400` and
-  `4655400` to find every copy.
+  address and list, the reservations answer in the FAQ, the footer, the JSON-LD `telephone`, and `404.html`.
+  Search both HTML files for `465-5400` and `4655400` to find every copy.
 - **Menu**: the six signature dishes and the full menu are in the `#menu` section of `index.html`. Dishes are
   also named in the About and "Every day" paragraphs, the FAQ (clam chowder, kids pancakes) and the dish photos
   in the JSON-LD `image` list; update those too if a dish changes or is dropped. Prices are not on the site;
