@@ -2,6 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/:link(https?:/+(?:www\\.)?seasiderestaurantbar\\.com.*)",
+      "destination": "https://seasiderestaurantbar.com/",
+      "permanent": false
+    },
+    {
       "source": "/:path(.*)",
       "has": [{ "type": "host", "value": "www.seasiderestaurantbar.com" }],
       "destination": "https://seasiderestaurantbar.com/:path",

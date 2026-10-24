@@ -52,6 +52,9 @@ branch and merge it into `main` when it is ready to go live.
   new name and update every reference to it (`index.html`, `styles.css`, the JSON-LD, `404.html`) instead of
   overwriting the old file, or visitors keep seeing the old one.
 - **Old addresses**: only the old site's real pages are redirected (listed in `vercel.json`). Everything else,
-  including old spam pages, must keep answering 404, so never add a catch-all redirect.
+  including old spam pages, must keep answering 404, so never add a catch-all redirect. The first redirect is a
+  stopgap: it sends a malformed Google Business Profile website link
+  (`http://www.seasiderestaurantbar.com/https://seasiderestaurantbar.com/`, live from 2026-10-24) to the home page.
+  Remove it once the profile's website shows `https://seasiderestaurantbar.com/`.
 - **Sitemap date**: after changing anything visible on the page (hours, menu, phone, text), set `<lastmod>` in
   `sitemap.xml` to that day's date (YYYY-MM-DD) in the same commit.
