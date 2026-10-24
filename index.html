@@ -1,31 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seaside Restaurant & Bar – Order fresh food</title>
-  <link rel="icon" href="images/favicon.png" sizes="32x32" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seaside Restaurant &amp; Bar | Ocean-View Seafood, Crescent City</title>
+  <meta name="description" content="Homemade clam chowder, seafood, breakfast and a full bar with Pacific Ocean views at the Oceanfront Lodge in Crescent City, CA. See our menu and hours.">
+  <link rel="canonical" href="https://seasiderestaurantbar.com/">
+  <meta name="theme-color" content="#05456F">
+  <link rel="icon" href="/images/favicon-96.png" sizes="96x96" type="image/png">
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Seaside Restaurant &amp; Bar">
+  <meta property="og:title" content="Seaside Restaurant &amp; Bar – Ocean-view seafood in Crescent City">
+  <meta property="og:description" content="Homemade clam chowder, seafood, breakfast and a full bar with Pacific Ocean views at the Oceanfront Lodge in Crescent City, CA. See our menu and hours.">
+  <meta property="og:url" content="https://seasiderestaurantbar.com/">
+  <meta property="og:image" content="https://seasiderestaurantbar.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1000">
+  <meta property="og:image:height" content="524">
+  <meta property="og:image:alt" content="Seaside Restaurant &amp; Bar's dining room, with windows looking out at the Pacific Ocean">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/images/hero-bg.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="/fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Restaurant",
+        "@id": "https://seasiderestaurantbar.com/#restaurant",
+        "name": "Seaside Restaurant & Bar",
+        "url": "https://seasiderestaurantbar.com/",
+        "telephone": "+1-707-465-5400",
+        "description": "Ocean-view seafood restaurant and full bar inside the Oceanfront Lodge in Crescent City, California, known for its homemade clam chowder.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "100 A Street",
+          "addressLocality": "Crescent City",
+          "addressRegion": "CA",
+          "postalCode": "95531",
+          "addressCountry": "US"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 41.7477377,
+          "longitude": -124.2034056
+        },
+        "hasMap": "https://www.google.com/maps?cid=7275603306722277926",
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "07:00", "closes": "10:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "11:30", "closes": "20:30" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday", "Sunday"], "opens": "11:30", "closes": "21:00" }
+        ],
+        "servesCuisine": ["Seafood", "American"],
+        "priceRange": "$$",
+        "hasMenu": "https://seasiderestaurantbar.com/#menu",
+        "image": [
+          "https://seasiderestaurantbar.com/images/og-image.jpg",
+          "https://seasiderestaurantbar.com/images/dish-clam-chowder-bread-bowl-800.jpg",
+          "https://seasiderestaurantbar.com/images/dish-captains-platter-800.jpg"
+        ],
+        "logo": "https://seasiderestaurantbar.com/images/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/seasiderestaurantbar/",
+          "https://www.facebook.com/seasidebarandrestaurant/",
+          "https://www.yelp.com/biz/seaside-restaurant-and-bar-crescent-city-2",
+          "https://www.tripadvisor.com/Restaurant_Review-g60944-d6614937-Reviews-Seaside_Restaurant-Crescent_City_California.html",
+          "https://www.google.com/maps?cid=7275603306722277926"
+        ],
+        "containedInPlace": {
+          "@type": "Hotel",
+          "name": "Oceanfront Lodge",
+          "url": "https://oceanfrontlodge1.com/",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "100 A Street",
+            "addressLocality": "Crescent City",
+            "addressRegion": "CA",
+            "postalCode": "95531",
+            "addressCountry": "US"
+          }
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://seasiderestaurantbar.com/#website",
+        "name": "Seaside Restaurant & Bar",
+        "url": "https://seasiderestaurantbar.com/",
+        "publisher": { "@id": "https://seasiderestaurantbar.com/#restaurant" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <a href="#content" class="skip-link">Skip to content</a>
+
+  <!-- Font Awesome Free by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0) -->
 
   <!-- Fixed Header -->
   <header class="site-header" id="masthead">
     <div class="header-inner">
       <div class="header-left">
         <div class="header-social">
-          <a href="https://www.instagram.com/seasiderestaurantbar/?g=5" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="social-icon-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor"/></svg></a>
-          <a href="https://www.doordash.com/store/seaside-restaurant-and-bar-crescent-city-27980263/" aria-label="DoorDash" target="_blank" rel="noopener noreferrer" class="social-icon-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M144.8 17c-11.3-17.8-37.2-22.8-54-9.4C35.3 51.9 0 118 0 192h256L144.8 17zM496 96h-48c-35.3 0-64 28.7-64 64v64H0c0 50.6 23 96.4 60.3 130.7C25.7 363.6 0 394.7 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-8.9-1.8-17.2-4.4-25.2 21.6 5.9 44.6 9.2 68.4 9.2s46.9-3.3 68.4-9.2c-2.7 8-4.4 16.3-4.4 25.2 0 44.2 35.8 80 80 80s80-35.8 80-80c0-37.3-25.7-68.4-60.3-77.3C425 320.4 448 274.6 448 224v-64h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM80 464c-17.6 0-32-14.4-32-32s14.4-32 32-32 32 14.4 32 32-14.4 32-32 32zm320-32c0 17.6-14.4 32-32 32s-32-14.4-32-32 14.4-32 32-32 32 14.4 32 32z" fill="currentColor"/></svg></a>
+          <a href="https://www.instagram.com/seasiderestaurantbar/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="social-icon-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor"/></svg></a>
+          <a href="https://www.doordash.com/store/seaside-restaurant-and-bar-crescent-city-27980263/" aria-label="Delivery on DoorDash" target="_blank" rel="noopener noreferrer" class="social-icon-btn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z" fill="currentColor"/></svg></a>
         </div>
       </div>
       <div class="header-center">
         <a href="/" class="logo-link" rel="home">
-          <img src="images/logo.png" class="logo" alt="Seaside Restaurant & Bar" width="130" height="120" decoding="async" />
+          <img src="/images/logo.png" class="logo" alt="Seaside Restaurant &amp; Bar" width="130" height="120" decoding="async">
         </a>
       </div>
       <div class="header-right">
@@ -38,15 +124,20 @@
     <main id="main">
 
       <!-- ===== HERO: Photo Section ===== -->
-      <section class="photo-section hero-section" style="background-image: url('images/hero-bg.jpg');">
+      <section class="photo-section hero-section">
         <div class="photo-overlay"></div>
         <div class="photo-content">
           <div class="container">
             <div class="hero-text">
-              <h6 class="hero-label">Welcome to seaside</h6>
+              <p class="hero-label">Seaside Restaurant &amp; Bar · Crescent City, CA</p>
               <div class="hero-squiggle"></div>
-              <h1 class="hero-title">The Best Clam Chowder</h1>
-              <a href="#about" class="btn-outline-white">Discover More</a>
+              <h1 class="hero-title">The Best Clam Chowder in Crescent City</h1>
+              <p class="hero-sub">Seafood, breakfast and a full bar with Pacific Ocean views, inside the Oceanfront Lodge at <span class="nowrap">100 A Street</span>.</p>
+              <div class="hero-actions">
+                <a href="#menu" class="btn-outline-white">See the menu</a>
+                <a href="#visit" class="btn-outline-white">Hours &amp; location</a>
+              </div>
+              <p class="hero-call"><a href="tel:+17074655400">Call (707) 465-5400</a></p>
             </div>
           </div>
         </div>
@@ -62,17 +153,21 @@
         <div class="panel-body">
           <div class="container grid-2col">
             <div class="about-text">
-              <h6 class="section-label">About Us</h6>
-              <h2 class="section-title">Our Story</h2>
-              <div class="fish-divider">
+              <p class="section-label">Our story</p>
+              <h2 class="section-title">Ocean-view dining in Crescent City</h2>
+              <div class="fish-divider" aria-hidden="true">
                 <span class="squiggle"></span>
-                <i class="fas fa-fish"></i>
+                <span class="fish"></span>
               </div>
-              <p>We grew to become the favorite place for seafood lovers of all age groups wanting to spend some quality time while sipping on the coffee we serve.</p>
-              <p>We grew to become the favorite place for seafood lovers of all age groups wanting to spend some quality time while sipping on the coffee we serve.</p>
+              <p>Seaside Restaurant &amp; Bar is inside the Oceanfront Lodge at <span class="nowrap">100 A Street</span>, where tall windows look straight out over the Pacific. Come in for breakfast, stop by for a bowl of chowder at lunch, or watch the sun go down over the ocean at dinner.</p>
+              <p>Our clam chowder is made fresh every day with clams, smoky bacon, potatoes and vegetables in a creamy broth. Have it by the bowl, in our homemade bread bowl, or with a side of coconut prawns.</p>
+              <p>We're about 500 yards from Battery Point Lighthouse, an easy walk from our door.</p>
             </div>
             <div class="about-image">
-              <img src="images/about-food.png" alt="Seaside food" width="600" height="600" decoding="async" />
+              <picture>
+                <source srcset="/images/about-food.webp" type="image/webp">
+                <img src="/images/about-food.png" alt="Clam chowder in a bread bowl with coconut prawns and garlic bread" width="600" height="600" loading="lazy" decoding="async">
+              </picture>
             </div>
           </div>
         </div>
@@ -84,14 +179,15 @@
       </section>
 
       <!-- ===== FULL BAR: Photo Section ===== -->
-      <section class="photo-section fullbar-section" style="background-image: url('images/fullbar-bg.png');">
+      <section class="photo-section fullbar-section">
         <div class="photo-overlay photo-overlay-dark"></div>
         <div class="photo-content">
           <h2 class="fullbar-title">Full Bar</h2>
+          <p class="fullbar-sub">Cocktails, beer and wine with an ocean view.</p>
         </div>
       </section>
 
-      <!-- ===== OUR WORK: White Content Panel ===== -->
+      <!-- ===== EVERY DAY: White Content Panel ===== -->
       <section class="content-panel">
         <div class="wave-top" aria-hidden="true">
           <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
@@ -101,31 +197,315 @@
         <div class="panel-body">
           <div class="container grid-2col">
             <div class="work-image">
-              <img src="images/work-team.png" alt="Our team at work" width="500" height="500" decoding="async" />
+              <picture>
+                <source type="image/webp" srcset="/images/dish-fettuccine-alfredo-480.webp 480w, /images/dish-fettuccine-alfredo-800.webp 800w" sizes="(min-width: 969px) 540px, calc(100vw - 40px)">
+                <img src="/images/dish-fettuccine-alfredo-800.jpg" alt="Fettuccine Alfredo with sliced grilled chicken, bacon and mushrooms, and two slices of garlic bread" width="800" height="533" loading="lazy" decoding="async">
+              </picture>
             </div>
             <div class="work-text">
-              <h6 class="section-label">We Love it</h6>
-              <h2 class="section-title">Our Work</h2>
-              <div class="fish-divider">
+              <p class="section-label">Every day</p>
+              <h2 class="section-title">Breakfast, lunch and dinner</h2>
+              <div class="fish-divider" aria-hidden="true">
                 <span class="squiggle"></span>
-                <i class="fas fa-fish"></i>
+                <span class="fish"></span>
               </div>
-              <p>At the Seaside Restaurant and Bar in Crescent City, a dedicated team works tirelessly to provide customers with a truly unforgettable dining experience.</p>
-              <p>The kitchen staff prepares delectable dishes using homemade ingredients. The servers work efficiently to ensure that each guest feels welcomed and well-cared for, delivering hot plates of food and refilling drinks with a smile. Meanwhile, the host greets guests at the door and manages reservations, making sure that everyone has a place to sit and enjoy the stunning ocean views. Behind the scenes, the dishwashers keep the kitchen running smoothly, and the bussers clear tables to make room for the next group of diners. Every person at the Seaside Restaurant and Bar plays an important role in creating a welcoming and memorable atmosphere for all who visit.</p>
+              <p>Mornings start at 7 with omelets, breakfast burritos, biscuits and gravy and our Seaside Breakfast Bowl, and the clam chowder is on the menu all day.</p>
+              <p>For lunch and dinner there's seafood, pasta, burgers, tacos and stir-fries, with a kids menu and desserts too. Fettuccine Alfredo is our most popular dish.</p>
+              <p><a href="https://order.toasttab.com/online/oceanfront-lodge-100-a-street">Order online</a> for pickup, get <a href="https://www.doordash.com/store/seaside-restaurant-and-bar-crescent-city-27980263/">delivery through DoorDash</a>, or call us at <a href="tel:+17074655400">(707) 465-5400</a>.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ===== MENU: White Content Panel ===== -->
-      <section class="content-panel menu-panel">
+      <!-- ===== MENU: Content Panel ===== -->
+      <section id="menu" class="content-panel menu-panel">
         <div class="panel-body">
-          <div class="container text-center">
-            <h6 class="section-label">Menu</h6>
-            <h2 class="section-title menu-title-box"><a href="https://order.toasttab.com/online/oceanfront-lodge-100-a-street">Glimpse of Our Menu</a></h2>
-            <div class="fish-divider fish-divider-center">
-              <span class="squiggle"></span>
-              <i class="fas fa-fish"></i>
+          <div class="container">
+            <div class="text-center">
+              <p class="section-label">Menu</p>
+              <h2 class="section-title menu-title-box">Our menu</h2>
+              <div class="fish-divider fish-divider-center" aria-hidden="true">
+                <span class="squiggle"></span>
+                <span class="fish"></span>
+              </div>
+              <p class="menu-intro">Seafood, homemade chowder and all-day favorites. Here are a few of our signature dishes.</p>
+            </div>
+
+            <div class="dish-grid">
+              <article class="dish-card">
+                <picture>
+                  <source type="image/webp" srcset="/images/dish-clam-chowder-bread-bowl-480.webp 480w, /images/dish-clam-chowder-bread-bowl-800.webp 800w" sizes="(min-width: 960px) 374px, (min-width: 600px) calc(50vw - 40px), calc(100vw - 32px)">
+                  <img src="/images/dish-clam-chowder-bread-bowl-800.jpg" alt="Clam chowder in a bread bowl, with a slice of toasted bread and a lettuce leaf" width="800" height="533" loading="lazy" decoding="async">
+                </picture>
+                <h3>Clam Chowder Bread Bowl</h3>
+                <p>Our homemade clam chowder, made fresh every day and served in a homemade bread bowl.</p>
+              </article>
+              <article class="dish-card">
+                <picture>
+                  <source type="image/webp" srcset="/images/dish-coconut-prawns-480.webp 480w, /images/dish-coconut-prawns-800.webp 800w" sizes="(min-width: 960px) 374px, (min-width: 600px) calc(50vw - 40px), calc(100vw - 32px)">
+                  <img src="/images/dish-coconut-prawns-800.jpg" alt="Coconut prawns on lettuce with a lemon wedge and a cup of sweet and sour sauce" width="800" height="533" loading="lazy" decoding="async">
+                </picture>
+                <h3>Coconut Prawns</h3>
+                <p>Plump prawns in a golden, crunchy coconut batter.</p>
+              </article>
+              <article class="dish-card">
+                <picture>
+                  <source type="image/webp" srcset="/images/dish-fish-and-chips-480.webp 480w, /images/dish-fish-and-chips-800.webp 800w" sizes="(min-width: 960px) 374px, (min-width: 600px) calc(50vw - 40px), calc(100vw - 32px)">
+                  <img src="/images/dish-fish-and-chips-800.jpg" alt="Three pieces of battered cod on fries, with coleslaw, lemon wedges and tartar sauce" width="800" height="533" loading="lazy" decoding="async">
+                </picture>
+                <h3>Fish &amp; Chips</h3>
+                <p>Three pieces of battered cod with fries and fresh coleslaw.</p>
+              </article>
+              <article class="dish-card">
+                <picture>
+                  <source type="image/webp" srcset="/images/dish-captains-platter-480.webp 480w, /images/dish-captains-platter-800.webp 800w" sizes="(min-width: 960px) 374px, (min-width: 600px) calc(50vw - 40px), calc(100vw - 32px)">
+                  <img src="/images/dish-captains-platter-800.jpg" alt="Battered cod, coconut prawns, scallops and calamari rings on fries, with tartar sauce, lemon and a side of coleslaw" width="800" height="533" loading="lazy" decoding="async">
+                </picture>
+                <h3>Captain's Platter</h3>
+                <p>Coconut prawns, cod, scallops and calamari with coleslaw and fries.</p>
+              </article>
+              <article class="dish-card">
+                <picture>
+                  <source type="image/webp" srcset="/images/dish-pinot-noir-salmon-480.webp 480w, /images/dish-pinot-noir-salmon-800.webp 800w" sizes="(min-width: 960px) 374px, (min-width: 600px) calc(50vw - 40px), calc(100vw - 32px)">
+                  <img src="/images/dish-pinot-noir-salmon-800.jpg" alt="Salmon in a dark red wine sauce with three coconut prawns, sautéed vegetables and rice" width="800" height="533" loading="lazy" decoding="async">
+                </picture>
+                <h3>Pinot Noir Salmon &amp; Coconut Prawns</h3>
+                <p>Grilled salmon in a rich red wine sauce with three coconut prawns.</p>
+              </article>
+              <article class="dish-card">
+                <picture>
+                  <source type="image/webp" srcset="/images/dish-prawn-scampi-480.webp 480w, /images/dish-prawn-scampi-800.webp 800w" sizes="(min-width: 960px) 374px, (min-width: 600px) calc(50vw - 40px), calc(100vw - 32px)">
+                  <img src="/images/dish-prawn-scampi-800.jpg" alt="Prawn scampi over pasta with diced tomatoes and a lemon wedge, and two slices of garlic bread" width="800" height="533" loading="lazy" decoding="async">
+                </picture>
+                <h3>Prawn Scampi</h3>
+                <p>Prawns with butter, white wine, lemon, tomato and parmesan, served with garlic bread.</p>
+              </article>
+            </div>
+
+            <h3 class="menu-subtitle">Full menu</h3>
+            <div class="menu-sections">
+              <details class="accordion menu-section">
+                <summary>Breakfast</summary>
+                <ul class="menu-list">
+                  <li><span class="menu-item-name">Clam Chowder Bread Bowl</span> <span class="menu-item-desc">Our homemade clam chowder in a homemade bread bowl</span></li>
+                  <li><span class="menu-item-name">Biscuits and Gravy</span></li>
+                  <li><span class="menu-item-name">Big Breakfast</span> <span class="menu-item-desc">Eggs your way, toast, and a waffle or pancake</span></li>
+                  <li><span class="menu-item-name">California Oatmeal</span></li>
+                  <li><span class="menu-item-name">Build Your Own</span> <span class="menu-item-desc">Eggs your way with pancake, hash browns, bacon, sausage or country gravy</span></li>
+                  <li><span class="menu-item-name">Little Farmers Omelet</span></li>
+                  <li><span class="menu-item-name">Seaside Breakfast Bowl</span> <span class="menu-item-desc">Eggs, bacon, sausage, tomatoes, peppers, onions, potatoes, cheddar</span></li>
+                  <li><span class="menu-item-name">Seaside Omelet with Cheese</span> <span class="menu-item-desc">Add veggies, avocado, bacon, sausage, ham or prawns</span></li>
+                  <li><span class="menu-item-name">Breakfast Burrito</span> <span class="menu-item-desc">Eggs, bacon, sausage, tomatoes, peppers, onions, potatoes, cheddar cheese</span></li>
+                  <li><span class="menu-item-name">Eggs Benedict</span></li>
+                  <li><span class="menu-item-name">Avocado Toast</span> <span class="menu-item-desc">On white, wheat or sourdough, with eggs your way</span></li>
+                  <li><span class="menu-item-name">Wake &amp; Taco</span> <span class="menu-item-desc">Three warm tacos, scrambled eggs, sausage, bacon, onions, bell peppers, shredded cheese</span></li>
+                  <li><span class="menu-item-name">Mañana Muffin</span> <span class="menu-item-desc">English muffin, scrambled eggs, onions, bell peppers, jalapeños, American cheese, with bacon, turkey or ham</span></li>
+                  <li><span class="menu-item-name">Toast</span> <span class="menu-item-desc">White, wheat or sourdough</span></li>
+                  <li><span class="menu-item-name">Kids Pancake</span> <span class="menu-item-desc">Plain, chocolate or strawberry</span></li>
+                </ul>
+              </details>
+              <details class="accordion menu-section">
+                <summary>Starters</summary>
+                <ul class="menu-list">
+                  <li><span class="menu-item-name">Clam Chowder</span> <span class="menu-item-desc">Bowl or bread bowl. Clams, smoky bacon, potatoes, celery, onions and carrots in a creamy broth, made fresh every day</span></li>
+                  <li><span class="menu-item-name">Classic Prawn Cocktail</span> <span class="menu-item-desc">Six chilled large prawns on crisp lettuce, cocktail sauce</span></li>
+                  <li><span class="menu-item-name">Coconut Prawns</span> <span class="menu-item-desc">Prawns in a crunchy coconut batter, sweet and sour dipping sauce</span></li>
+                  <li><span class="menu-item-name">Jalapeño Poppers</span> <span class="menu-item-desc">Jalapeños stuffed with cream cheese, lightly breaded and fried</span></li>
+                  <li><span class="menu-item-name">Mozzarella Sticks</span> <span class="menu-item-desc">With marinara sauce</span></li>
+                  <li><span class="menu-item-name">Calamari</span> <span class="menu-item-desc">Fried calamari, marinara sauce</span></li>
+                  <li><span class="menu-item-name">Veggie Spring Rolls</span> <span class="menu-item-desc">Mixed veggies in thin golden pastry, sweet and sour sauce</span></li>
+                  <li><span class="menu-item-name">Garlic Fries</span></li>
+                  <li><span class="menu-item-name">Appetizer Sampler</span> <span class="menu-item-desc">Coconut prawns, mozzarella sticks, breaded chicken bites</span></li>
+                  <li><span class="menu-item-name">Coastal Crab Cakes</span></li>
+                  <li><span class="menu-item-name">Edamame</span> <span class="menu-item-desc">Salted or spicy</span></li>
+                  <li><span class="menu-item-name">Crispy Chicken Dumplings</span></li>
+                  <li><span class="menu-item-name">Crispy Shrimp &amp; Pork Dumplings</span></li>
+                </ul>
+              </details>
+              <details class="accordion menu-section">
+                <summary>Lunch</summary>
+                <ul class="menu-list">
+                  <li><span class="menu-item-name">Clam Chowder</span> <span class="menu-item-desc">Bowl or bread bowl, made fresh every day</span></li>
+                  <li><span class="menu-item-name">Quesadilla California</span> <span class="menu-item-desc">Chipotle sauce, pico de gallo, jalapeño, with chicken, salmon, prawns or rib eye</span></li>
+                  <li><span class="menu-item-name">Baja Tacos</span> <span class="menu-item-desc">Pico de gallo, slaw, creamy jalapeño sauce, with prawns, cod, rib eye or chicken</span></li>
+                  <li><span class="menu-item-name">Pub Club Sandwich</span> <span class="menu-item-desc">Turkey, ham, bacon, lettuce, tomatoes, mayo, your choice of bread, fries</span></li>
+                  <li><span class="menu-item-name">Local Cheese Burger 8 oz</span> <span class="menu-item-desc">Your choice of cheese, lettuce, tomatoes, onions, pickles, chipotle mayo, fries</span></li>
+                  <li><span class="menu-item-name">Mongolian Stir Fry Noodle</span> <span class="menu-item-desc">Mushrooms, red onions, bell peppers, cabbage, teriyaki sauce, with salmon, chicken, rib eye, prawns or veggies</span></li>
+                  <li><span class="menu-item-name">Egg Fried Rice &amp; Two Spring Rolls</span> <span class="menu-item-desc">With two spring rolls; choose salmon, prawns, orange or teriyaki chicken, beef, bacon or veggies</span></li>
+                  <li><span class="menu-item-name">Chef Salad</span> <span class="menu-item-desc">Mixed greens, tomatoes, black olives, shredded cheese, with salmon, prawns, turkey &amp; ham, chicken &amp; bacon or rib eye</span></li>
+                  <li><span class="menu-item-name">Crab Cake Sandwich</span> <span class="menu-item-desc">Crab cake, jalapeño tartar, pickles, coleslaw, bell pepper, onion, fries</span></li>
+                  <li><span class="menu-item-name">Pesto Chicken Sandwich</span> <span class="menu-item-desc">Seared chicken breast, pesto mayo, mozzarella, tomatoes, fries</span></li>
+                  <li><span class="menu-item-name">Nacho Supreme</span> <span class="menu-item-desc">Tomatoes, black olives, jalapeño, avocado, cheese, beef, sour cream</span></li>
+                </ul>
+              </details>
+              <details class="accordion menu-section">
+                <summary>Seafood</summary>
+                <p class="menu-section-note">The salmon, shrimp creole and mussels come with sautéed seasonal veggies, soup or salad, and fries, rice or extra veggies (baked potato after 4 PM).</p>
+                <ul class="menu-list">
+                  <li><span class="menu-item-name">Coconut Prawns Bread Bowl Clam Chowder</span> <span class="menu-item-desc">Six large coconut prawns and our homemade clam chowder in a homemade bread bowl</span></li>
+                  <li><span class="menu-item-name">United Kingdom Fish &amp; Chips</span> <span class="menu-item-desc">Three pieces of battered cod, fries, fresh coleslaw</span></li>
+                  <li><span class="menu-item-name">Captain's Platter</span> <span class="menu-item-desc">Coconut prawns, cod, scallops, calamari, fresh coleslaw, fries</span></li>
+                  <li><span class="menu-item-name">Pacific Salmon</span> <span class="menu-item-desc">Seasoned salmon, seared</span></li>
+                  <li><span class="menu-item-name">Pinot Noir Salmon &amp; Coconut Prawns</span> <span class="menu-item-desc">Grilled salmon in a rich red wine sauce, three coconut prawns</span></li>
+                  <li><span class="menu-item-name">Spicy Shrimp Creole</span> <span class="menu-item-desc">Six large prawns sautéed in butter, garlic, white wine, tomatoes, jalapeños, spicy seasoning</span></li>
+                  <li><span class="menu-item-name">Fisherman's Mussels</span> <span class="menu-item-desc">Pinot Grigio sauce with tomatoes, black olives, garlic, cream</span></li>
+                </ul>
+              </details>
+              <details class="accordion menu-section">
+                <summary>Pasta</summary>
+                <ul class="menu-list">
+                  <li><span class="menu-item-name">Shrimp and Bacon Rosso</span> <span class="menu-item-desc">Prawns, bacon, butter, garlic, white wine, red sauce, pepper flakes, parmesan</span></li>
+                  <li><span class="menu-item-name">Prawn Scampi</span> <span class="menu-item-desc">Prawns, butter, white wine, lemon, tomato, parmesan, garlic bread</span></li>
+                  <li><span class="menu-item-name">Fettuccine Alfredo</span> <span class="menu-item-desc">Our most popular dish. Butter, white wine, garlic, mushrooms, parmesan, with chicken &amp; bacon, salmon or prawns, garlic bread</span></li>
+                  <li><span class="menu-item-name">Beef Stroganoff</span> <span class="menu-item-desc">Garlic, butter, sour cream, mushrooms, onions, red wine, heavy cream, garlic bread</span></li>
+                  <li><span class="menu-item-name">Seafood Alfredo</span></li>
+                </ul>
+              </details>
+              <details class="accordion menu-section">
+                <summary>Entrées</summary>
+                <p class="menu-section-note">Both come with sautéed seasonal veggies, soup or salad, and fries, rice or extra veggies (baked potato after 4 PM).</p>
+                <ul class="menu-list">
+                  <li><span class="menu-item-name">Teriyaki Chicken &amp; Coconut Prawns</span> <span class="menu-item-desc">Chicken breast marinated in homemade teriyaki sauce and grilled, three coconut prawns</span></li>
+                  <li><span class="menu-item-name">Chicken Cordon Bleu</span> <span class="menu-item-desc">Breaded chicken breast stuffed with ham and Swiss cheese, Alfredo sauce, mushrooms</span></li>
+                </ul>
+              </details>
+              <details class="accordion menu-section">
+                <summary>Kids</summary>
+                <ul class="menu-list">
+                  <li><span class="menu-item-name">Mac &amp; Cheese Bites</span></li>
+                  <li><span class="menu-item-name">Grilled Cheese</span> <span class="menu-item-desc">With fries</span></li>
+                  <li><span class="menu-item-name">Ham or Turkey Sandwich</span> <span class="menu-item-desc">Toasted or cold, with or without American cheese</span></li>
+                  <li><span class="menu-item-name">Cheese Quesadilla</span></li>
+                  <li><span class="menu-item-name">Butter Noodles</span></li>
+                  <li><span class="menu-item-name">Kids Spaghetti</span> <span class="menu-item-desc">Add beef, chicken, shrimp or salmon</span></li>
+                  <li><span class="menu-item-name">Kids Fettuccine Alfredo</span> <span class="menu-item-desc">Add beef, chicken, shrimp or salmon</span></li>
+                  <li><span class="menu-item-name">Kids Popcorn Chicken</span> <span class="menu-item-desc">With fries</span></li>
+                </ul>
+              </details>
+              <details class="accordion menu-section">
+                <summary>Desserts</summary>
+                <ul class="menu-list">
+                  <li><span class="menu-item-name">No-Bake Blueberry Cheesecake</span> <span class="menu-item-desc">Cream cheese and blueberries on a buttery graham cracker crust</span></li>
+                  <li><span class="menu-item-name">Banana Spring Rolls</span></li>
+                  <li><span class="menu-item-name">Bread Pudding</span></li>
+                  <li><span class="menu-item-name">Chocolate Ganache</span></li>
+                  <li><span class="menu-item-name">Ice Cream Scoop</span></li>
+                </ul>
+              </details>
+            </div>
+            <p class="menu-note">Dishes change from time to time. For today's menu and prices, <a href="https://order.toasttab.com/online/oceanfront-lodge-100-a-street">order online</a>.</p>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="https://order.toasttab.com/online/oceanfront-lodge-100-a-street">Order online for pickup</a>
+              <a class="btn btn-secondary" href="https://www.doordash.com/store/seaside-restaurant-and-bar-crescent-city-27980263/">Delivery on DoorDash</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== VISIT: Content Panel ===== -->
+      <section id="visit" class="content-panel visit-panel">
+        <div class="panel-body">
+          <div class="container">
+            <div class="text-center">
+              <p class="section-label">Visit us</p>
+              <h2 class="section-title">Hours &amp; location</h2>
+              <div class="fish-divider fish-divider-center" aria-hidden="true">
+                <span class="squiggle"></span>
+                <span class="fish"></span>
+              </div>
+            </div>
+            <div class="visit-grid">
+              <div class="visit-location">
+                <address class="visit-address">
+                  <strong>Seaside Restaurant &amp; Bar</strong><br>
+                  Inside the Oceanfront Lodge<br>
+                  100 A Street<br>
+                  Crescent City, CA 95531<br>
+                  <a href="tel:+17074655400">(707) 465-5400</a>
+                </address>
+                <div class="btn-row btn-row-start">
+                  <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Seaside+Restaurant+%26+Bar%2C+100+A+St%2C+Crescent+City%2C+CA+95531&amp;destination_place_id=ChIJF11DTExm0FQRJrrW36gi-GQ">Get directions</a>
+                  <a class="btn btn-secondary" href="https://oceanfrontlodge1.com/">Oceanfront Lodge</a>
+                </div>
+                <ul class="visit-notes">
+                  <li>About 500 yards from Battery Point Lighthouse</li>
+                  <li>Wheelchair-accessible entrance and restroom</li>
+                  <li>Kids menu</li>
+                </ul>
+              </div>
+              <div class="visit-hours">
+                <table class="hours-table">
+                  <caption>Opening hours</caption>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Breakfast</th>
+                      <td>Every day</td>
+                      <td class="hours-time"><!-- HOURS (provisional) -->7:00–10:00 AM</td>
+                    </tr>
+                  </tbody>
+                  <tbody>
+                    <tr>
+                      <th scope="rowgroup" rowspan="2">Lunch &amp; dinner</th>
+                      <td>Monday–Thursday</td>
+                      <td class="hours-time"><!-- HOURS (provisional) -->11:30 AM–8:30 PM</td>
+                    </tr>
+                    <tr>
+                      <td>Friday–Sunday</td>
+                      <td class="hours-time"><!-- HOURS (provisional) -->11:30 AM–9:00 PM</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ: Content Panel ===== -->
+      <section id="faq" class="content-panel faq-panel">
+        <div class="panel-body">
+          <div class="container">
+            <div class="text-center">
+              <p class="section-label">FAQ</p>
+              <h2 class="section-title">Questions</h2>
+              <div class="fish-divider fish-divider-center" aria-hidden="true">
+                <span class="squiggle"></span>
+                <span class="fish"></span>
+              </div>
+            </div>
+            <div class="faq-list">
+              <details class="accordion faq-item">
+                <summary>Where is Seaside Restaurant &amp; Bar?</summary>
+                <p>Inside the Oceanfront Lodge at <span class="nowrap">100 A Street</span>, Crescent City, CA 95531, about 500 yards from Battery Point Lighthouse.</p>
+              </details>
+              <details class="accordion faq-item">
+                <summary>Do you serve breakfast?</summary>
+                <p>Yes, every day from <!-- HOURS (provisional) -->7:00 to 10:00 AM.</p>
+              </details>
+              <details class="accordion faq-item">
+                <summary>What are your lunch and dinner hours?</summary>
+                <p>Monday to Thursday <!-- HOURS (provisional) -->11:30 AM to 8:30 PM, and Friday to Sunday <!-- HOURS (provisional) -->11:30 AM to 9:00 PM.</p>
+              </details>
+              <details class="accordion faq-item">
+                <summary>Is your clam chowder homemade?</summary>
+                <p>Yes. We make it fresh every day and serve it by the bowl or in our homemade bread bowl, at breakfast, lunch and dinner.</p>
+              </details>
+              <details class="accordion faq-item">
+                <summary>Does the restaurant have ocean views?</summary>
+                <p>Yes. The dining room and the bar look out over the Pacific Ocean.</p>
+              </details>
+              <details class="accordion faq-item">
+                <summary>Can I order takeout or delivery?</summary>
+                <p>Yes. <a href="https://order.toasttab.com/online/oceanfront-lodge-100-a-street">Order online</a> for pickup, or get <a href="https://www.doordash.com/store/seaside-restaurant-and-bar-crescent-city-27980263/">delivery through DoorDash</a>.</p>
+              </details>
+              <details class="accordion faq-item">
+                <summary>Do you have a kids menu?</summary>
+                <p>Yes. There's a kids menu at lunch and dinner, and kids' pancakes at breakfast.</p>
+              </details>
+              <details class="accordion faq-item">
+                <summary>Is there a bar?</summary>
+                <p>Yes, a full bar with cocktails, beer and wine.</p>
+              </details>
             </div>
           </div>
         </div>
@@ -139,22 +519,27 @@
     <div class="footer-inner">
       <div class="footer-main">
         <div class="footer-logo-wrap">
-          <img class="footer-logo" src="images/logo.png" alt="Seaside Restaurant & Bar" width="97" height="89" />
+          <img class="footer-logo" src="/images/logo.png" alt="Seaside Restaurant &amp; Bar" width="97" height="89" loading="lazy" decoding="async">
         </div>
         <div class="footer-text">
-          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+          <p>Ocean-view seafood, homemade clam chowder and a full bar, inside the Oceanfront Lodge in Crescent City, California.</p>
+          <address class="footer-address"><span class="nowrap">100 A Street</span>, <span class="nowrap">Crescent City, CA 95531</span> · <a href="tel:+17074655400">(707) 465-5400</a></address>
+          <p class="footer-links"><a href="#visit">Hours &amp; directions</a> · <a href="https://oceanfrontlodge1.com/">Oceanfront Lodge</a></p>
         </div>
         <div class="footer-social">
-          <a href="https://www.yelp.com/biz/seaside-restaurant-and-bar-crescent-city-2" aria-label="Yelp" target="_blank" rel="noopener noreferrer" class="footer-social-link" style="color: #7acdee;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M42.9 240.32l99.62 48.61c19.2 9.4 16.2 37.51-4.5 42.71L30.5 358.45a22.79 22.79 0 0 1-28.21-19.6 197.16 197.16 0 0 1 9-85.32 22.8 22.8 0 0 1 31.61-13.21zm44 239.25a199.45 199.45 0 0 0 79.42 32.11A22.78 22.78 0 0 0 192.94 490l3.9-110.82c.7-21.3-25.5-31.91-39.81-16.1l-74.21 82.4a22.82 22.82 0 0 0 4.09 34.09zm145.34-109.92l58.81 94a22.93 22.93 0 0 0 34 5.5 198.36 198.36 0 0 0 52.71-67.61A23 23 0 0 0 364.17 370l-105.42-34.26c-20.31-6.5-37.81 15.8-26.51 33.91zm148.33-132.23a197.44 197.44 0 0 0-50.41-69.31 22.85 22.85 0 0 0-34 4.4l-62 91.92c-11.9 17.7 4.7 40.61 25.2 34.71L366 268.63a23 23 0 0 0 14.61-31.21zM62.11 30.18a22.86 22.86 0 0 0-9.9 32l104.12 180.44c11.7 20.2 42.61 11.9 42.61-11.4V22.88a22.67 22.67 0 0 0-24.5-22.8 320.37 320.37 0 0 0-112.33 30.1z" fill="currentColor"/></svg></a>
-          <a href="https://www.google.com/maps/place/Seaside+Restaurant+%26+Bar/@41.7477377,-124.2055943,17z" aria-label="Google Reviews" target="_blank" rel="noopener noreferrer" class="footer-social-link" style="color: #dc4e41;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28"><path d="M12 12.281h11.328c.109.609.187 1.203.187 2C23.515 21.125 18.921 26 11.999 26c-6.641 0-12-5.359-12-12s5.359-12 12-12c3.234 0 5.953 1.188 8.047 3.141L16.78 8.282c-.891-.859-2.453-1.859-4.781-1.859-4.094 0-7.438 3.391-7.438 7.578s3.344 7.578 7.438 7.578c4.75 0 6.531-3.406 6.813-5.172h-6.813v-4.125z" fill="currentColor"/></svg></a>
+          <a href="https://www.instagram.com/seasiderestaurantbar/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" fill="currentColor"/></svg></a>
+          <a href="https://www.facebook.com/seasidebarandrestaurant/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" fill="currentColor"/></svg></a>
+          <a href="https://www.yelp.com/biz/seaside-restaurant-and-bar-crescent-city-2" aria-label="Yelp" target="_blank" rel="noopener noreferrer" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" aria-hidden="true" focusable="false"><path d="M42.9 240.32l99.62 48.61c19.2 9.4 16.2 37.51-4.5 42.71L30.5 358.45a22.79 22.79 0 0 1-28.21-19.6 197.16 197.16 0 0 1 9-85.32 22.8 22.8 0 0 1 31.61-13.21zm44 239.25a199.45 199.45 0 0 0 79.42 32.11A22.78 22.78 0 0 0 192.94 490l3.9-110.82c.7-21.3-25.5-31.91-39.81-16.1l-74.21 82.4a22.82 22.82 0 0 0 4.09 34.09zm145.34-109.92l58.81 94a22.93 22.93 0 0 0 34 5.5 198.36 198.36 0 0 0 52.71-67.61A23 23 0 0 0 364.17 370l-105.42-34.26c-20.31-6.5-37.81 15.8-26.51 33.91zm148.33-132.23a197.44 197.44 0 0 0-50.41-69.31 22.85 22.85 0 0 0-34 4.4l-62 91.92c-11.9 17.7 4.7 40.61 25.2 34.71L366 268.63a23 23 0 0 0 14.61-31.21zM62.11 30.18a22.86 22.86 0 0 0-9.9 32l104.12 180.44c11.7 20.2 42.61 11.9 42.61-11.4V22.88a22.67 22.67 0 0 0-24.5-22.8 320.37 320.37 0 0 0-112.33 30.1z" fill="currentColor"/></svg></a>
+          <a href="https://www.google.com/maps?cid=7275603306722277926" aria-label="Google reviews" target="_blank" rel="noopener noreferrer" class="footer-social-link footer-social-google"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="28" viewBox="0 0 24 28" aria-hidden="true" focusable="false"><path d="M12 12.281h11.328c.109.609.187 1.203.187 2C23.515 21.125 18.921 26 11.999 26c-6.641 0-12-5.359-12-12s5.359-12 12-12c3.234 0 5.953 1.188 8.047 3.141L16.78 8.282c-.891-.859-2.453-1.859-4.781-1.859-4.094 0-7.438 3.391-7.438 7.578s3.344 7.578 7.438 7.578c4.75 0 6.531-3.406 6.813-5.172h-6.813v-4.125z" fill="currentColor"/></svg></a>
+          <a href="https://www.doordash.com/store/seaside-restaurant-and-bar-crescent-city-27980263/" aria-label="Delivery on DoorDash" target="_blank" rel="noopener noreferrer" class="footer-social-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" aria-hidden="true" focusable="false"><path d="M112 0C85.5 0 64 21.5 64 48V96H16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 272c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 48c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 240c8.8 0 16 7.2 16 16s-7.2 16-16 16H64 16c-8.8 0-16 7.2-16 16s7.2 16 16 16H64 208c8.8 0 16 7.2 16 16s-7.2 16-16 16H64V416c0 53 43 96 96 96s96-43 96-96H384c0 53 43 96 96 96s96-43 96-96h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V288 256 237.3c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7H416V48c0-26.5-21.5-48-48-48H112zM544 237.3V256H416V160h50.7L544 237.3zM160 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96zm272 48a48 48 0 1 1 96 0 48 48 0 1 1 -96 0z" fill="currentColor"/></svg></a>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Copyright &copy; 2026 Seaside Restaurant & Bar.</p>
+      <p>Copyright &copy; 2026 Seaside Restaurant &amp; Bar.</p>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="/script.js"></script>
 </body>
 </html>
