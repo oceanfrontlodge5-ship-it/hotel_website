@@ -58,3 +58,10 @@ branch and merge it into `main` when it is ready to go live.
   Remove it once the profile's website shows `https://seasiderestaurantbar.com/`.
 - **Sitemap date**: after changing anything visible on the page (hours, menu, phone, text), set `<lastmod>` in
   `sitemap.xml` to that day's date (YYYY-MM-DD) in the same commit.
+- **IndexNow**: `b7e9d7684edfe2c0f0c01c74dc568e86.txt` is the site's IndexNow key file. Bing (which ChatGPT search and
+  Copilot draw on) and the other IndexNow search engines check it before accepting a re-crawl request, so never
+  delete or rename it. After a change is live, ask them to re-crawl the page:
+  `curl "https://api.indexnow.org/indexnow?url=https://seasiderestaurantbar.com/&key=b7e9d7684edfe2c0f0c01c74dc568e86"`
+  (HTTP 200 or 202 means accepted).
+- **Link to the hotel**: `containedInPlace` in the JSON-LD points at `https://oceanfrontlodge1.com/#hotel`, the `@id` of
+  the hotel's own structured data on oceanfrontlodge1.com. If either side changes, change both together.
